@@ -1,0 +1,131 @@
+/* VERSION MOBIL */
+
+/* CAJA SECCTION */
+.experiences {
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMG WAVE */
+.wave {
+    width: 100%;
+    position: relative;
+    top: 2px;
+    color: var(--primary-color);
+}
+.wave_bottom {
+    transform: scaleX(-1);
+    transform: scaleY(-1);
+    top: -2px;
+}
+
+/* CONTENIDO */
+.experiences-body {
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+}
+.experiences-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 25px;
+}
+
+.experience {
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.experience-data {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.experience-company {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.experience-position {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.experience-description {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* VERSION ESCRITORIO */
+@media (min-width: 950px) {
+    .experiences-title {
+        font-size: 50px;
+        margin: 35px 0;
+    }
+    .experience {
+        padding: 0;
+        min-width: 400px;
+        /* border: 2px solid white; */
+    }
+    .experience_left {
+        text-align: right;
+    }
+    .experience-data {
+        font-size: 40px;
+    }
+    .experience-company {
+        font-size: 25px;
+    }
+    .experience-position {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .experience-description {
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 1.3;
+    }
+
+    /* CSS GRID */
+    .experiences-grid {
+        display: grid;
+        grid-template-columns: auto 2px auto;
+        gap: 20px 70px; /* y x */
+        padding: 70px;
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    /* .empty {
+        border: 1px solid greenyellow;
+    } */
+    .line {
+        background-color: var(--text-color-inverse);
+        position: relative;
+        
+    }
+    .line::before,
+    .line::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--text-color-inverse);
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: -9px;
+    }
+    /* .line::before{
+        height: 30px;
+        background-color: red;
+    } */
+    .line::after {
+        top: 100%;
+        z-index: 1;
+    }
+}

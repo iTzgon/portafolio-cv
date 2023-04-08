@@ -1,0 +1,311 @@
+<!-- From: https://www.youtube.com/watch?v=ADbxRybIpH0
+Página web responsive desde CEROs -->
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CARGAR TEMA DEL LOCAL -->
+    <script>
+        const userTheme = localStorage.getItem("theme")
+
+        if (userTheme === "dark") {
+            setTheme("dark")
+        }
+        
+        function setTheme(newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme)
+        } 
+
+        /* Si quiero detectar tema sistema operativo */
+        /* const userTheme = localStorage.getItem("theme")
+        const darkQuerry = window.matchMedia("(prefers-color-scheme: dark)")
+
+        if (userTheme === "dark" || (!userTheme && darkQuerry.matches)) {
+            setTheme("dark")
+        }
+
+        
+        darkQuerry.addEventListener("change", function(e) {
+            setTheme(e.matches ? "dark" : "light")
+        })
+        
+        function setTheme(newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme)
+        } */
+    </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/app.js" defer ></script>
+    <script src="js/colorToggle.js" defer ></script>
+
+    <title>Document</title>
+</head>
+<body>
+   <!-- MENU HORIZONTAL -->
+   <header class="topheader">
+    <nav class="topnav">
+        <!-- LOGO -->
+        <a href="#" class="logo">
+            <img src="img/youtube-picture.png" width="50" height="50" alt="logo">
+            <span class="logo-text">German Palaczio <br> { code } </span>
+        </a>
+
+        
+
+        <!-- MENU NAVEGACIÓN -->
+        <ul class="menu">
+            <!-- Links Navegacion -->
+            <button class="close-menu" aria-label="Cerrar menu" type="button">
+                <!-- <img src="img/close-icon.svg" alt="cerrar menu"> -->
+                <svg 
+                    width="29" 
+                    height="29" 
+                    viewBox="0 0 29 29" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path 
+                        d="M27 2L2 27" 
+                        stroke="currentColor" 
+                        stroke-width="3" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                    <path 
+                        d="M2 2L27 27" 
+                        stroke="currentColor" 
+                        stroke-width="3" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <!-- BOTON CLOSE-MENU -->
+            <li><a href="#profile" class="selected">Perfil</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+      
+        <!-- BOTON MOON-SUN -->
+        <button class="dark-mode-btn" aria-label="Activar modo oscuro">
+            <img src="img/sun.svg" alt="">
+        </button>
+        <button class="light-mode-btn" aria-label="Activar modo claro">
+            <img src="img/moon.svg" alt="">
+        </button>
+
+        <!-- BOTON OPEN-MENU -->
+        <button class="open-menu" aria-label="Abrir menu" type="button">
+            <!-- <img src="img/hamburger-icon.svg" alt="abrir menu"> -->
+            <svg 
+                width="29" 
+                height="29" 
+                viewBox="0 0 29 29" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                
+                <path 
+                    d="M2 14.5H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                <path 
+                    d="M2 2H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                <path 
+                    d="M2 27H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </nav>
+   </header>
+
+   <!-- PERFIL -->
+   <div class="horizontal-padding vertical-padding">
+       <section class="profile">
+        <div class="profile-info">
+            <h1 class="profile-title">Hola, soy <br> German Palaczio</h1>
+            <p class="profile-details">Soy un apacionado por la arquitectura y desarrollo de software, con más de 10 años de experiencia en varios lenguajes de programación y tecnologías.</p>
+            <button class="profile-btn" type="button">Descargar CV</button>
+        </div>
+        <span class="profile-img-section">
+            <img class="profile-img" src="img/professional-profile.png" alt="hombre programador">
+            <div class="profile-img-line"></div>
+        </span>
+       </section>
+   </div>
+
+   <!-- EXPERIENCIA -->
+   <section class="experiences">
+        <!-- <img src="img/wave2.svg" alt="" class="wave"> -->
+        <svg 
+            class="wave"
+            id="Capa_1" 
+            data-name="Capa 1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1440 83.89">
+            <path 
+                d="M1440,156l-80-16c-80-16-240-48-400-48s-320,32-480,37.3C320,135,160,113,80,102.7L0,92v83.89H1440Z"
+                transform="translate(0 -92)" 
+                fill="currentColor" />
+        </svg>
+
+        <div class="experiences-body">
+            <h2 class="experiences-title">Experiencia</h2>
+            <div class="experiences-grid">
+                <!-- 1 -->
+                <div class="empty"></div>
+                <div class="line"></div>
+                <div class="experience">
+                    <div class="experience-data">2020-2021</div>
+                    <div class="experience-company">CONSTELLATION AGENCY</div>
+                    <div class="experience-position">Senior Software Engineer</div>
+                    <div class="experience-description">Desarrollo de la interfaz y el back-end de un SaaS usado por cientos de clientes para desplegar anuncios a escala. Usamos Reat.js, TypeScript, Cypress, Node.js, Serverless y la infrastructura de AWS (Entre otras tecnologías).</div>
+                </div>
+                <!-- 2 -->
+                <div class="experience experience_left">
+                    <div class="experience-data">2018-2020</div>
+                    <div class="experience-company">MODUS CREATE</div>
+                    <div class="experience-position">Senior Software Engineer</div>
+                    <div class="experience-description">Implementación de una nueva versión de la plataforma que permite de forma inteligente emparejar estudiantes con instrucciones educativas. Usamos tecnologías como React.js GraphQL, ElasticSearch, Node.js y otras que nos permitieron lograr una mejora notable en el rendimiento de la plataforma.</div>
+                </div>
+                <div class="line"></div>
+                <div class="empty"></div>
+                <!-- 3 -->
+                <div class="empty"></div>
+                <div class="line"></div>
+                <div class="experience">
+                    <div class="experience-data">2016-2018</div>
+                    <div class="experience-company">ENDAVA</div>
+                    <div class="experience-position">Senior Software Engineer</div>
+                    <div class="experience-description">Desarrollado de soluciones para un cliente en la industria inmobiliaria y otro líder en servicios médicos en USA. Implementamos una arquitectura desacoplada usando .Net para el back-end y React.js en el front-end. Además de brindar capacitaciones a la empresa sobre temas como Principios SOLID y DDD.</div>
+                </div>
+            </div>
+        </div>
+
+        <svg 
+            class="wave wave_bottom"
+            id="Capa_1" 
+            data-name="Capa 1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1440 83.89">
+            <path 
+                d="M1440,156l-80-16c-80-16-240-48-400-48s-320,32-480,37.3C320,135,160,113,80,102.7L0,92v83.89H1440Z"
+                transform="translate(0 -92)" 
+                fill="currentColor" />
+        </svg>
+        <!-- <img src="img/wave2.svg" alt="" class="wave wave_bottom"> -->
+   </section>
+
+   <!-- HABILIDADES -->
+   <div class="horizontal-padding vertical-padding">
+       <section class="skills">
+            <h2 class="skills-title">Habilidades</h2>
+            <ul class="skills-list">
+                <li class="skills-skill">CSS</li>
+                <li class="skills-skill">HTML</li>
+                <li class="skills-skill">Node.js</li>
+                <li class="skills-skill">React.js</li>
+                <li class="skills-skill">TypeScript</li>
+                <li class="skills-skill">JavaScript</li>
+            </ul>
+       </section>
+   </div>
+
+   <!-- CONTACTO -->
+   <div class="horizontal-padding vertical-padding">
+       <section class="contact">
+        <h2 class="contact-title">Contacto</h2>
+        <!-- DETALLES DE CONTACTO -->
+        <div class="contact-details">
+            <!-- Grupo1 -->
+            <div class="contact-details-group">
+                <p class="contact-label">Dirección:</p>
+                <p class="contact-text">Montevideo, Uruguay</p>
+            </div>
+            <!-- Grupo2 -->
+            <div class="contact-details-group">
+                <p class="contact-label">Email:</p>
+                <p class="contact-text">yoelvismulen@gmail.com</p>
+            </div>
+            <!-- Grupo3 -->
+            <div class="contact-details-group">
+                <p class="contact-text">Deje su mensaje y con gusto le responderé</p>
+            </div>
+        </div>
+        <!-- FORMULARIOS -->
+        <form name="contact" class="contact-form">
+            <!-- Grupo1 -->
+            <div class="contact-form-group">
+                <label for="name">Nombre</label>
+                <input required type="text" name="name" id="name">
+            </div>
+            <!-- Grupo2 -->
+            <div class="contact-form-group">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <!-- Grupo3 -->
+            <div class="contact-form-group">
+                <label for="menssage">Mensaje</label>
+                <textarea required name="menssage" id="menssage" rows="6"></textarea>
+            </div>
+            <!-- BOTON ENVIAR -->
+            <button type="submit" class="contact-form-submit">Enviar</button>
+        </form>
+        <!-- SOCIAL MEDIA -->
+        <nav class="social">
+            <ul class="social-list">
+                <!-- twitter -->
+                <li>
+                    <a href="https://twitter.com/">
+                        <img src="img/social/twitter.svg" alt="perfil de twitter">
+                    </a>
+                </li>
+                <!-- youtube -->
+                <li>
+                    <a href="https://www.youtube.com/">
+                        <img src="img/social/youtube.svg" alt="perfil de youtube">
+                    </a>
+                </li>
+                <!-- github -->
+                <li>
+                    <a href="https://github.com/">
+                        <img src="img/social/github.svg" alt="perfil de github">
+                    </a>
+                </li>
+                <!-- linkedin -->
+                <li>
+                    <a href="https://www.linkedin.com/">
+                        <img src="img/social/linkedin.svg" alt="perfil de linkedin">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       </section>
+   </div>
+</body>
+</html>
+
+
+
+<!-- 
+    primera toma: 10gr alcohol & 30gr jugo = 40gr bebida 17º (10 minutos desp[no siento nada])
+    segunda toma: 10gr alcohol & 40gr jugo = 50gr bebida 14º (10 minutos desp[siento algo muy muy leve])
+    tercera toma: 12gr alcohol & 48gr jugo = 60gr bebida 14º (10 minutos desp[siento algo muy muy leve])
+-->
