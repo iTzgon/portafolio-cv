@@ -37,6 +37,12 @@ Página web responsive desde CEROs -->
         } */
     </script>
 
+    <!-- Width: https://favicon.io/favicon-converter/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav-icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav-icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav-icons/favicon-16x16.png" />
+    <link rel="manifest" href="/fav-icons/site.webmanifest" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -141,7 +147,7 @@ Página web responsive desde CEROs -->
         <div class="profile-info">
             <h1 class="profile-title">Hola, soy <br> German Palaczio</h1>
             <p class="profile-details">Soy un apacionado por la arquitectura y desarrollo de software, con más de 10 años de experiencia en varios lenguajes de programación y tecnologías.</p>
-            <button class="profile-btn" type="button">Descargar CV</button>
+            <a class="profile-btn" href="/Yoelvis Mulen - CV.pdf" download>Descargar CV</a>
         </div>
         <span class="profile-img-section">
             <img class="profile-img" src="img/professional-profile.png" alt="hombre programador">
@@ -249,7 +255,7 @@ Página web responsive desde CEROs -->
             </div>
         </div>
         <!-- FORMULARIOS -->
-        <form name="contact" class="contact-form">
+        <form name="contact" class="contact-form" name="contact" netlify>
             <!-- Grupo1 -->
             <div class="contact-form-group">
                 <label for="name">Nombre</label>
